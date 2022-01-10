@@ -1,0 +1,29 @@
+.d-flex{
+    display: flex;
+    
+}
+.wrapper{
+    background: #fff;
+    min-height: 91vh;
+    margin: 15px;
+    box-shadow: 5px 9px 20px rgb(0 0 0 / 15%);
+    
+}
+
+.jc-around{
+    justify-content: space-around;
+}
+
+.column{
+    flex-direction: column;
+    width: 20%;
+
+    padding-top: 50px;
+    
+    text-align: center;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #1e2939;
+    color: white;
+
+}
