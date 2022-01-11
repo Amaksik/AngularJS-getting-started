@@ -1,0 +1,63 @@
+<div class="wrapper d-flex jc-around">
+
+    <div class="column">
+
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <a href="#!/favourite">Favourite</a>
+            <a href="#">Services</a>
+            <a href="#">Clients</a>
+            <a href="#">Contact</a>
+          </div>
+          
+          <!-- Use any element to open the sidenav -->
+          <span onclick="openNav()">open</span>
+          <p> <strong>Paragraphs</strong> <br>
+            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec odio. Quisque volutpat mattis eros. Nullam malesuada erat ut turpis. Suspendisse urna nibh, viverra non, semper suscipit, posuere a, pede.
+            
+            Donec nec justo eget felis facilisis fermentum. Aliquam porttitor mauris sit amet orci. Aenean dignissim pellentesque felis.
+            
+            Morbi in sem quis dui placerat ornare. Pellentesque odio nisi, euismod in, pharetra a, ultricies in, diam. Sed arcu. Cras consequat.
+            
+            Praesent dapibus, neque id cursus faucibus, tortor neque egestas auguae, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus.
+            
+            Phasellus ultrices nulla quis nibh. Quisque a lectus. Donec consectetuer ligula vulputate sem tristique cursus. Nam nulla quam, gravida non, commodo a, sodales sit amet, nisi.</p>
+
+    </div>
+
+
+    <div class="column">
+        <h1>Hello {{name}}</h1>        
+        
+        <div ng-controller="weatherCtrl">
+            <div ng-hide="$scope.IsForecastNotHiden">
+
+                <input type="text" ng-model="cityname"> 
+                <button ng-click="search(item)">search</button>
+
+            </div>
+
+            <div ng-hide="!$scope.IsForecastNotHiden">
+
+                <h1>WEATHER</h1>
+            </div>
+        </div>
+        
+    </div>
+    
+
+    <div ng-controller="itmCtrl" class="column">
+        <input type="text" ng-model="item"> 
+        <button ng-click="addItem(item)">add</button>
+        <button ng-click="removeItem(item)">remove</button>
+        <p>Lit of items below:</p>
+        <ul>
+            <li ng-repeat="element in items | orderBy: element">{{element | uppercase}}</li>
+        </ul>
+    </div>
+
+
+    
+
+</div>
+    
